@@ -1,0 +1,259 @@
+body {
+	font-family: 'Comfortaa', cursive;
+	background-color: #cfcfcf;
+	text-align: center;
+}
+
+#logo {
+	width: 60px;
+	height: 79px;
+	margin-top:5px;
+}
+
+#main {
+
+}
+
+#center_content {
+	width: 870px;
+	float: right;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.filter_listitem {
+	float: left;
+}
+
+.filter_text {
+
+	font-size: 13px;
+	color: #565656;
+	font-family: 'NanumGothicWeb';
+}
+
+.filter_x {
+	height: 10px;
+	width: auto;
+}
+
+.filter_container {
+	height: 21px;
+	padding-right: 5px;
+	padding-left: 5px;
+	margin-right: 5px;
+}
+
+#data {
+	overflow: auto;
+	height: 500px;
+}
+
+#info{
+	overflow: auto;
+}
+
+#right_option {
+	overflow: auto;
+	height: 500px;
+	text-align: center;
+}
+
+.option {
+	font-size: 13px;
+	margin-top: 2px;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-bottom: 2px;
+	font-family: 'NanumGothicWeb';
+	color: #727272;
+}
+
+.option_container {
+	background-color: #e5e5e5;
+	margin-top: 7px;
+	padding: 1px;
+	width: 150px;
+}
+
+.option_container p {
+	line-height: 13px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+.option_container input {
+	background: none;
+	border: none;
+	font-size: 15px;
+	padding: 5px;
+	height: 30px;
+	width: 150px;
+}
+
+input:focus {
+	outline: none;
+}
+
+.option_outer {
+	margin-top: 10px;
+	font-size: 15px;
+	color: #363636;
+}
+
+.data_container {
+	height: 50px;
+}
+
+.first_c {
+	float: left;
+	width: 300px;
+	margin-top: 5px;
+	font-family: 'NanumGothicWeb';
+	line-height: 20px;
+	margin-left: 10px;
+}
+
+.photo {
+	height: 30px;
+	width: 30px;
+	margin-top: 10px;
+	margin-left: 6px;
+	float: left;
+}
+
+.first_c .name {
+	font-family: 'NanumGothicBoldWeb';
+	color: #505050;
+}
+
+.first_c .english_name {
+	font-family: 'NanumGothicBoldWeb';
+	font-size: 13px;
+	color: #808080;
+}
+
+.first_c .class {
+	font-size: 11px;
+	color: #535353;
+}
+
+.second_c {
+	margin-top: 5px;
+	float: left;
+	line-height: 20px;
+	font-family: 'NanumGothicWeb';
+	color: #535353;
+}
+
+.second_c .phone_number {
+	font-size: 12px;
+}
+
+.second_c .email_address {
+	font-size: 12px;
+}
+
+.third_c {
+	margin-top: 5px;
+	float: right;
+	line-height: 20px;
+	margin-right: 10px;
+	font-family: 'NanumGothicWeb';
+}
+
+.third_c .note {
+	font-size: 12px;
+	color: #535353;
+}
+.nav_button {
+	background: #f1f1f1;
+	border: none;
+	height: 30px;
+	width: 130px;
+	color: #545454;
+	font-family: 'Comfortaa', cursive;
+	text-decoration: none;
+	font-size: 14px;
+}
+.handCursor {
+	cursor: pointer;
+}
+a {
+	color: #929292;
+	font-family: 'Comfortaa', cursive;
+	text-decoration: none;
+	font-size: 13px;
+}
+
+#container {
+	height: auto;
+	text-align: left;
+	background-color: #e3e3e3;
+	padding: 10px;
+	margin: 0 auto;
+	width: 1050px;
+	position: relative;
+	overflow: hidden;
+}
+
+#info {
+	background-color: #b6b6b6;
+	width: 800px;
+	height: 650px;
+	display: none;
+	float: left;
+}
+
+#top_card {
+	background-color: #e7e7e7;
+	width: 770px;
+	height: 150px;
+	margin: 5px;
+	padding: 10px;
+}
+
+
+/*
+ @media only screen and (min-width: 1600px) {
+ #logo {
+ width: 60px;
+ height: auto;
+ }
+
+ }
+ @media only screen and (max-width: 1600px) {
+ #logo {
+ width: 60px;
+ height: auto;
+ }
+
+ }
+ @media only screen and (max-width: 800px) and (orientation: landscape) {
+ #logo {
+ width: 70px;
+ height: auto;
+ }
+
+ }
+
+ @media only screen and (max-width: 480px) {
+ #logo {
+ width: 70px;
+ height: auto;
+ }
+
+ }
+
+ @media only screen and (max-width: 360px) {
+ #logo {
+ width: 150px;
+ height: auto;
+ }
+
+ }
+ */

@@ -9,8 +9,16 @@ body a[target="_blank"]{
 	display:none;
 }
 
-#main {
-	
+#content {
+	font-family:'Century Gothic W01', 'Gothic';
+}
+
+#reasons {
+	font-family:'Century Gothic W01', 'Gothic';
+}
+
+.bold{
+	font-family:'Century Gothic W01 Bold', 'GothicB';
 }
 
 .title{

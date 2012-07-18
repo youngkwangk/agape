@@ -5,10 +5,14 @@ body {
 	text-align: center;
 }
 
+body a[target="_blank"]{
+	display:none;
+}
+
 #main {
 	
 }
 
 .title{
-	font-family:'Century Gothic W01 Bold', 'CaviarDreamsRegular';
+	font-family:'Century Gothic W01 Bold', 'GothicB';
 }

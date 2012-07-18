@@ -6,6 +6,21 @@
  */
 
 @font-face {
+	font-family: 'GothicB';
+	font-style: normal;
+	font-weight: 400;
+	src: url('c:\windows\fonts\GOTHICB.TTF');
+}
+
+
+@font-face {
+	font-family: 'Gothic';
+	font-style: normal;
+	font-weight: 400;
+	src: url('c:\windows\fonts\GOTHIC.TTF');
+}
+
+@font-face {
 	font-family: 'NanumGothicWeb';
 	font-style: normal;
 	font-weight: 400;

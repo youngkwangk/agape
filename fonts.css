@@ -1,3 +1,10 @@
+/*
+ * font-family:'Century Gothic W01 Bold';
+ font-family:'CenturyGothicW01-BoldIt';
+ font-family:'CenturyGothicW02-Italic';
+ font-family:'Century Gothic W01';
+ */
+
 @font-face {
 	font-family: 'NanumGothicWeb';
 	font-style: normal;
@@ -14,24 +21,32 @@
 
 @font-face {
 	font-family: 'CaviarDreamsRegular';
-	src: url('caviardreams-webfont.eot');
-	src: url('caviardreams-webfont.eot?#iefix') format('embedded-opentype'), url('caviardreams-webfont.woff') format('woff'), url('caviardreams-webfont.ttf') format('truetype'), url('caviardreams-webfont.svg#CaviarDreamsRegular') format('svg');
+	src: url('/fonts/caviardreams-webfont.eot');
+	src: url('/fonts/caviardreams-webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/caviardreams-webfont.woff') format('woff'), url('/fonts/caviardreams-webfont.ttf') format('truetype'), url('/fonts/caviardreams-webfont.svg#CaviarDreamsRegular') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'CaviarDreamsBold';
-	src: url('caviardreams_bold-webfont.eot');
-	src: url('caviardreams_bold-webfont.eot?#iefix') format('embedded-opentype'), url('caviardreams_bold-webfont.woff') format('woff'), url('caviardreams_bold-webfont.ttf') format('truetype'), url('caviardreams_bold-webfont.svg#CaviarDreamsBold') format('svg');
+	src: url('/fonts/caviardreams_bold-webfont.eot');
+	src: url('/fonts/caviardreams_bold-webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/caviardreams_bold-webfont.woff') format('woff'), url('/fonts/caviardreams_bold-webfont.ttf') format('truetype'), url('/fonts/caviardreams_bold-webfont.svg#CaviarDreamsBold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'CaviarDreamsItalic';
+	src: url('/fonts/caviardreamsitalic-webfont.eot');
+	src: url('/fonts/caviardreamsitalic-webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/caviardreamsitalic-webfont.woff') format('woff'), url('/fonts/caviardreamsitalic-webfont.ttf') format('truetype'), url('/fonts/caviardreamsitalic-webfont.svg#CaviarDreamsItalic') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'CaviarDreamsBoldItalic';
-	src: url('caviardreams_bolditalic-webfont.eot');
-	src: url('caviardreams_bolditalic-webfont.eot?#iefix') format('embedded-opentype'), url('caviardreams_bolditalic-webfont.woff') format('woff'), url('caviardreams_bolditalic-webfont.ttf') format('truetype'), url('caviardreams_bolditalic-webfont.svg#CaviarDreamsBoldItalic') format('svg');
+	src: url('/fonts/caviardreams_bolditalic-webfont.eot');
+	src: url('/fonts/caviardreams_bolditalic-webfont.eot?#iefix') format('embedded-opentype'), url('/fonts/caviardreams_bolditalic-webfont.woff') format('woff'), url('/fonts/caviardreams_bolditalic-webfont.ttf') format('truetype'), url('/fonts/caviardreams_bolditalic-webfont.svg#CaviarDreamsBoldItalic') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }

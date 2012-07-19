@@ -1,26 +1,42 @@
 body {
-	
 	font-family: 'CaviarDreamsRegular';
 	width: 99%;
 	text-align: center;
 }
 
-body a[target="_blank"]{
-	display:none;
+body a[target='_blank'] {
+	display: none;
 }
 
 #content {
-	font-family:'Century Gothic W01', 'Gothic';
+	font-family: 'Century Gothic W01', 'Gothic';
 }
 
 #reasons {
-	font-family:'Century Gothic W01', 'Gothic';
+	font-family: 'Century Gothic W01', 'Gothic';
 }
 
-.bold{
-	font-family:'Century Gothic W01 Bold', 'GothicB';
+.bold {
+	font-family: 'Century Gothic W01 Bold', 'GothicB';
 }
 
-.title{
-	font-family:'Century Gothic W01 Bold', 'GothicB';
+.title {
+	font-family: 'Century Gothic W01 Bold', 'GothicB';
 }
+
+.numberCircle {
+    -webkit-border-radius: 999px;
+    -moz-border-radius: 999px;
+    border-radius: 999px;
+    behavior: url('PIE.htc');
+
+    width: 22px;
+    height: 22px;
+    padding: 2px;
+    float:left;
+    margin-right:7px;
+    background: #353536;
+    border: 0px solid #666;
+    color: #DDDDDD;
+    text-align: center;
+}​

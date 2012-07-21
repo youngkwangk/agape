@@ -32,54 +32,55 @@
 				apiVersion : 0
 			});
 		</script>
-		<script type="text/javascript" src="methods.js"></script>
+		<script type="text/javascript" src="../methods.js"></script>
 
-		<!--
 		<script type="text/javascript">
-		$(document).ready(function() {
+			Application = StackMob.Model.extend({
+				schemaName : 'application',
+			});
+			function join() {
+				$("#content").hide();
+				$("#join").show();
+				$("#join_us").hide();
+				$("#about_us").show();
+			}
 
-		//Define your class/object
-		var TestObject = StackMob.Model.extend({
-		schemaName : 'testobject' //Tell StackMob to save instances of TestObject to the table "testobject"
-		});
+			function about() {
+				$("#content").show();
+				$("#join").hide();
+				$("#join_us").show();
+				$("#about_us").hide();
+			}
 
-		//Create a local instance of TestObject by passing JSON into the constructor
-		//We have several different field types here as examples.
-		//Fields must be lower case.
-		var to = new TestObject({
-		message : 'This test object instance will show you how StackMob creates your DB from JSON data',
-		integer : 1,
-		decimal : 2.5,
-		istestobject : true,
-		stringarray : ['This', 'is', 'an', 'array', 'of', 'strings'],
-		intarray : [1, 2, 3, 4, 5],
-		decimals : [1.1, 2.2, 3.3],
-		booleans : [true, false, true, false]
-		});
-
-		//Call "create" to fire off the AJAX call to StackMob to create this object instance
-		//If this is the first time StackMob has seen a 'testobject', StackMob will create the database schema automatically for you.
-		//When the server is done, AJAX callbacks are fired: 'success' / 'error'
-		to.create({
-		success : function(model) {
-		//Notice how StackMob auto generated a unique primary key for this object instance under "testobject_id".
-		//Schema primary keys are [schema name]_id
-		//If you specified "testobject_id" in your JSON, StackMob will use your given one instead.
-		console.debug(model.toJSON());
-		},
-		error : function(model, response) {
-		console.debug("Oops there was an error in creating the object.");
-		console.debug("Have you initialized your JS SDK?");
-		console.debug("Are you running this on StackMob's Local Runner?");
-		console.debug("Are you running this on StackMob's GitHub-integrated hosting?")
-		console.debug(response);
-		}
-		});
-		});
-
+			function createUser(name, phone, email, reason) {
+				var application = new Application({
+					name : name,
+					phone : phone,
+					email : email,
+					reason : reason
+				});
+				application.create(debugCallback('Creating User: Bruce Wayne'));
+			};
+			function debugCallback(txt, s, f) {
+				return {
+					success : function(result) {
+						alert("Submit Complete\nYou will be contacted soon!");
+						document.getElementById('name').value = "";
+						document.getElementById('phone').value = "";
+						 document.getElementById('email').value = "";
+						  document.getElementById('reason').value = "";
+						  about();
+						return result;
+					},
+					error : function(model, response) {
+						alert("Submit Failed :(\ntry again");
+						return response;
+					}
+				};
+			};
 		</script>
-		-->
-		<title>Agape DB</title>
+
+		<title>Visual Worship</title>
 
 		<link href="http://www.stackmob.com/platform/favicon.ico" type="image/vnd.microsoft.icon" rel="icon" />
 		<link href="images/icon.png" type="image/png" rel="icon" />
@@ -94,9 +95,28 @@
 					<br>
 					<span style="font-size:52px; color:#FFFFFF;">VISUAL WORSHIP*</span>
 				</div>
-				<button id="join_us" style="margin-top:65px; border: none; font-size:20px; font-family: 'CaviarDreamsBold'; float:right; width:180px; height:37px; background-color:#075ec9; color:#DDDDDD">
+				<button id="join_us" onclick="join();" style="margin-top:65px; border: none; font-size:20px; font-family: 'CaviarDreamsBold'; float:right; width:180px; height:37px; background-color:#075ec9; color:#DDDDDD">
 					JOIN US
 				</button>
+				<button id="about_us" onclick="about()" style="display:none; margin-top:65px; border: none; font-size:20px; font-family: 'CaviarDreamsBold'; float:right; width:180px; height:37px; background-color:#ffe538; color:#333333">
+					ABOUT US
+				</button>
+			</div>
+
+			<div id="join" style="padding:15px; width:860px; float:left; height:auto; background-color:#FFFFFF; display:none">
+
+				<input id="name" type="text" placeholder="Name" name="name" style="font-family: 'NanumGothicWeb'; margin-top:10px; padding:3px; width:300px; height:40px;font-size:20px; margin-bottom:10px;">
+				<br>
+				<input id="phone" type="tel" placeholder="Phone Number" name="phone" style="font-family: 'NanumGothicWeb'; padding:3px; width:300px; height:40px; font-size:20px; margin-bottom:10px; ">
+				<br>
+				<input id="email" type="email" placeholder="Email" name="email" style="font-family: 'NanumGothicWeb'; padding:3px; width:300px; height:40px; font-size:20px; margin-bottom:10px; ">
+				<br>
+				<textarea id="reason" placeholder="Reason why you want to join" name="reason" style="font-family: 'NanumGothicWeb'; width:300px; height:250px; font-size:20px; "></textarea>
+				<br>
+				<button onclick="createUser(document.getElementById('name').value, document.getElementById('phone').value, document.getElementById('email').value, document.getElementById('reason').value)" style="margin-bottom:20px; margin-top:35px; border: none; font-size:30px; font-family: 'CaviarDreamsBold'; width:250px; height:50px; background-color:#075ec9; color:#DDDDDD">
+					Submit
+				</button>
+
 			</div>
 			<div id="content" style="padding:15px; width:860px; float: left; height: auto; background-color:#FFFFFF">
 				<div id="mission">
@@ -133,7 +153,7 @@
 						<div style="font-size:20px; margin-left:5px; margin-top:5px; float:left;">
 							Stage Design
 						</div>
-						<img src="images/media.png" style="width:35px; height:35px; float:left; margin-left:50px;"/>
+						<img src="images/media.png" onclick="StackMobExamples.join()" style="width:35px; height:35px; float:left; margin-left:50px;"/>
 						<div style="font-size:20px; margin-left:5px; margin-top:5px; float:left;">
 							Media
 						</div>
@@ -204,7 +224,7 @@
 							</div>
 						</div>
 					</div>
-					<button id="join_us2" style="float: left; margin-left:300px; margin-bottom:20px; margin-top:35px; border: none; font-size:30px; font-family: 'CaviarDreamsBold'; width:250px; height:50px; background-color:#075ec9; color:#DDDDDD">
+					<button id="join_us2" onclick="join()" style="float: left; margin-left:300px; margin-bottom:20px; margin-top:35px; border: none; font-size:30px; font-family: 'CaviarDreamsBold'; width:250px; height:50px; background-color:#075ec9; color:#DDDDDD">
 						JOIN US
 					</button>
 				</div>
